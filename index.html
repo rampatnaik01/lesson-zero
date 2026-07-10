@@ -1,1 +1,97 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Malware Analysis Guide</title>
+
+<style>
+body{
+    background:#0d1117;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    padding-top:80px;
+}
+
+.box{
+    width:700px;
+    margin:auto;
+}
+
+.bar{
+    width:100%;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.progress{
+    height:20px;
+    width:0%;
+    background:#00b4d8;
+    animation:load 3s forwards;
+}
+
+@keyframes load{
+    from{width:0%;}
+    to{width:100%;}
+}
+</style>
+
+<script>
+setTimeout(function(){
+document.getElementById("lesson").style.display="block";
+document.getElementById("download").style.display="none";
+},3000);
+</script>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<div id="download">
+
+<h1>Preparing Malware_Analysis_Guide.pdf</h1>
+
+<p>Please wait...</p>
+
+<div class="bar">
+<div class="progress"></div>
+</div>
+
+</div>
+
+<div id="lesson" style="display:none;">
+
+<h1>❌ Lesson 0</h1>
+
+<h2>You clicked a random link because it promised free knowledge.</h2>
+
+<p>
+That's exactly how many malware campaigns begin.
+</p>
+
+<p>
+Before opening any file or URL, always ask:
+</p>
+
+<p>✔ Who shared it?</p>
+<p>✔ Do I trust the source?</p>
+<p>✔ Was I expecting it?</p>
+<p>✔ Can I verify it?</p>
+
+<h3>Congratulations.</h3>
+
+<p>You just completed Lesson Zero.</p>
+
+<h2>The real Malware Analysis Guide will be released in my next LinkedIn post.</h2>
+
+</div>
+
+</div>
+
+</body>
+</html>
