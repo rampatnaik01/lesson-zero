@@ -1,96 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Malware Analysis Guide</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preparing Malware Analysis Guide...</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
 body{
-    background:#0d1117;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-    padding-top:80px;
+
+background:#03045e;
+background:linear-gradient(135deg,#03045e,#001233);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+color:white;
+
+overflow:hidden;
+
 }
 
-.box{
-    width:700px;
-    margin:auto;
+.container{
+
+width:800px;
+max-width:90%;
+text-align:center;
+
 }
 
-.bar{
-    width:100%;
-    background:#333;
-    border-radius:20px;
-    overflow:hidden;
-    margin-top:20px;
+.card{
+
+background:rgba(255,255,255,.05);
+
+padding:50px;
+
+border-radius:18px;
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 0 40px rgba(0,180,216,.15);
+
+}
+
+h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+opacity:.8;
+
+margin-bottom:40px;
+
+}
+
+.progress-container{
+
+background:#1c2d5a;
+
+height:22px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+margin-top:20px;
+
 }
 
 .progress{
-    height:20px;
-    width:0%;
-    background:#00b4d8;
-    animation:load 3s forwards;
+
+height:100%;
+
+width:0;
+
+background:linear-gradient(90deg,#0077b6,#00b4d8,#90e0ef);
+
+transition:width .2s;
+
 }
 
-@keyframes load{
-    from{width:0%;}
-    to{width:100%;}
+.log{
+
+margin-top:35px;
+
+text-align:left;
+
+font-size:20px;
+
+line-height:42px;
+
+min-height:220px;
+
 }
+
+.hidden{
+
+display:none;
+
+}
+
+.success{
+
+color:#90e0ef;
+
+}
+
+.alert{
+
+color:#ff5d73;
+
+font-weight:bold;
+
+font-size:28px;
+
+margin-top:20px;
+
+}
+
+.lesson{
+
+display:none;
+
+animation:fade 1.5s;
+
+}
+
+.lesson h2{
+
+font-size:54px;
+
+margin-bottom:20px;
+
+color:#caf0f8;
+
+}
+
+.lesson p{
+
+font-size:23px;
+
+margin:18px 0;
+
+line-height:1.7;
+
+}
+
+.check{
+
+color:#90e0ef;
+
+}
+
+.big{
+
+font-size:34px;
+
+font-weight:bold;
+
+margin-top:40px;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.cursor{
+
+display:inline-block;
+
+width:10px;
+
+background:white;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+.footer{
+
+margin-top:40px;
+
+font-size:18px;
+
+opacity:.7;
+
+}
+
 </style>
-
-<script>
-setTimeout(function(){
-document.getElementById("lesson").style.display="block";
-document.getElementById("download").style.display="none";
-},3000);
-</script>
 
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<div id="download">
+<div class="card" id="downloadScreen">
 
-<h1>Preparing Malware_Analysis_Guide.pdf</h1>
+<h1>📄 Malware_Analysis_Guide.pdf</h1>
 
-<p>Please wait...</p>
+<p class="subtitle">Preparing your download...</p>
 
-<div class="bar">
-<div class="progress"></div>
+<div class="progress-container">
+<div class="progress" id="progress"></div>
 </div>
 
+<div class="log" id="log"></div>
+
 </div>
 
-<div id="lesson" style="display:none;">
+<div class="card lesson" id="lessonScreen">
 
-<h1>❌ Lesson 0</h1>
-
-<h2>You clicked a random link because it promised free knowledge.</h2>
+<h2>❌ LESSON ZERO</h2>
 
 <p>
-That's exactly how many malware campaigns begin.
+You trusted a download simply because it promised
+<strong>free knowledge.</strong>
 </p>
 
 <p>
-Before opening any file or URL, always ask:
+That is exactly how many malware campaigns begin.
 </p>
 
-<p>✔ Who shared it?</p>
-<p>✔ Do I trust the source?</p>
-<p>✔ Was I expecting it?</p>
-<p>✔ Can I verify it?</p>
+<p class="big">
+Trust is <span style="color:#ff5d73;">NOT</span> a security control.
+</p>
 
-<h3>Congratulations.</h3>
+<p>
 
-<p>You just completed Lesson Zero.</p>
+Before opening any file or URL ask yourself:
 
-<h2>The real Malware Analysis Guide will be released in my next LinkedIn post.</h2>
+</p>
+
+<p class="check">✔ Who shared it?</p>
+
+<p class="check">✔ Is it from a trusted source?</p>
+
+<p class="check">✔ Was I expecting it?</p>
+
+<p class="check">✔ Can I verify it?</p>
+
+<p class="big">
+
+Congratulations.
+
+</p>
+
+<p>
+
+You have successfully completed
+<b>Lesson Zero.</b>
+
+</p>
+
+<p style="margin-top:40px;font-size:30px;color:#90e0ef">
+
+The real Malware Analysis Guide
+will be released in my next LinkedIn post.
+
+</p>
+
+<div class="footer">
+
+Stay Curious • Stay Skeptical
 
 </div>
 
 </div>
+
+</div>
+
+<script>
+
+const progress=document.getElementById("progress");
+
+const log=document.getElementById("log");
+
+const steps=[
+
+"Initializing secure download...",
+
+"Downloading Malware_Analysis_Guide.pdf",
+
+"Generating SHA256 hash...",
+
+"Verifying Digital Signature...",
+
+"Scanning with Windows Defender...",
+
+"Scanning with VirusTotal...",
+
+"Scanning with Hybrid Analysis...",
+
+"Checking File Reputation...",
+
+"Analysis Complete.",
+
+"",
+
+"❌ ALERT",
+
+"Trust is NOT a security control."
+
+];
+
+let width=0;
+
+let i=0;
+
+const interval=setInterval(()=>{
+
+width+=10;
+
+progress.style.width=width+"%";
+
+if(i<steps.length){
+
+log.innerHTML+="<div>"+steps[i]+"</div>";
+
+log.scrollTop=log.scrollHeight;
+
+i++;
+
+}
+
+if(width>=100){
+
+clearInterval(interval);
+
+setTimeout(()=>{
+
+document.getElementById("downloadScreen").style.display="none";
+
+document.getElementById("lessonScreen").style.display="block";
+
+},2500);
+
+}
+
+},700);
+
+</script>
 
 </body>
+
 </html>
