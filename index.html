@@ -25,19 +25,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-height:100vh;
+min-height:100vh;
 
 color:white;
 
-overflow:hidden;
+padding:30px 15px;
 
-}
-
-.container{
-
-width:800px;
-max-width:90%;
-text-align:center;
+overflow-x:hidden;
+overflow-y:auto;
 
 }
 
@@ -58,20 +53,12 @@ box-shadow:0 0 40px rgba(0,180,216,.15);
 }
 
 h1{
-
-font-size:42px;
-
-margin-bottom:20px;
-
+font-size:clamp(28px,4vw,42px);
 }
 
 .subtitle{
 
-font-size:20px;
-
-opacity:.8;
-
-margin-bottom:40px;
+font-size:clamp(16px,2vw,20px);
 
 }
 
@@ -149,24 +136,15 @@ animation:fade 1.5s;
 
 .lesson h2{
 
-font-size:54px;
-
-margin-bottom:20px;
-
-color:#caf0f8;
+font-size:clamp(34px,6vw,54px);
 
 }
 
 .lesson p{
 
-font-size:23px;
-
-margin:18px 0;
-
-line-height:1.7;
+font-size:clamp(17px,2vw,23px);
 
 }
-
 .check{
 
 color:#90e0ef;
